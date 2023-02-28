@@ -6,9 +6,10 @@ let img2 = document.querySelector("#colection-img-2");
 let img3 = document.querySelector("#colection-img-3");
 let img4 = document.querySelector("#colection-img-4");
 let btn = document.querySelector(".btn");
+let backgroundHeader = document.querySelector(".background-header");
+let body = document.querySelector("body");
 
 let massageX = false;
-
 
 
 input.firstElementChild.addEventListener("focus", function (){

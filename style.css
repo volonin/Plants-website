@@ -24,26 +24,36 @@
 }
 body{
     margin: 0;
+    overflow-x:hidden;
 }
 header{
-    background-image: url("Img/unsplash_dPUWzT5dqz8.png");
-    background-size: 100%;
     height: 1000px;
     background-repeat: no-repeat;
+    z-index: 3;
+}
+.background-header{
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    min-width: 1550px;
+    left: 1px;
 }
 header .header{
     display: grid;
     grid-template-columns: 3fr 1fr;
+    z-index: 3;
 }
 header .header div{
     display: flex;
     justify-content: right;
     margin-top: 50px;
+    z-index: 3;
 }
 header .header img{
     margin-top: 45px;
     width: 32px;
     margin-left: 30%;
+    z-index: 3;
 }
 header .header img:hover{
     animation: pulse 1s ease-in-out;
@@ -67,12 +77,14 @@ header .title h1{
     font-size: 60px;
     margin: 0 0 10px 0;
     text-align: center;
+    z-index: 3;
 }
 header .title span{
     font-family: WorkSans-Regular;
     color: white;
     font-size: 18px;
     margin-bottom: 10px;
+    z-index: 3;
 }
 header .title span:first-of-type{
     margin-top: 22px;
@@ -162,7 +174,7 @@ header .massage span:last-of-type{
     height: 200px;
     width: 100%;
     position: absolute;
-    top: 810px; left: 0;
+    top: 860px; left: 0;
 }
 .icons{
     display: flex;
@@ -443,4 +455,44 @@ footer #bottom-footer{
     font-size: 18px;
     font-family: WorkSans-Regular;
     padding: 0 0 30px 0;
+
 }
+@media (max-width: 1440px){
+    header .crice{
+        top: 650px;
+    }
+    header .title div img{
+        width: 15%;
+        margin-top: 5px;
+    }
+}
+@media (max-width: 1000px){
+    header .crice{
+        display: none;
+        background-color: #828282;
+    }
+    header .title div img{
+        width: 17%;
+        margin-top: 5px;
+    }
+    .icons{
+        width: 90%;
+    }
+}
+@media (max-width: 800px){
+    .colection .products{
+        flex-direction: column;
+        align-items: center;
+    }
+    .colection .products .card{
+        width: 55%;
+        margin-top: 40px;
+    }
+    .colection .products .card:hover{
+        width: 60%;
+    }
+    .visit button{
+        width: 20%;
+    }
+}
+
